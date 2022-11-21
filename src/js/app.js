@@ -1,8 +1,5 @@
-const unusedVariable = 'variable';
-console.log(unusedVariable);
+import src from '../img/goblin.png';
+import Game from './Game';
 
-export default function demo(value) {
-  return value;
-}
-
-console.log('app.js included');
+const newGame = new Game(src, 4);
+newGame.start();

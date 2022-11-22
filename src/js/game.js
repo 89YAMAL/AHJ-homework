@@ -30,10 +30,15 @@ export default class Game {
         return image;
     }
 
+    //случайное число
+    getRandom(max) {
+        return Math.floor(Math.random() * max);
+      }
+
     //появление картинки в поле
     imageInField(img) {
         const max = this.size ** 2;
-        const id = Math.floor(Math.random() * max); 
+        const id = this.getRandom(max); 
         const dataId = document.querySelector(`div[data-id = '${id}']`);
         dataId.append(img);
     }

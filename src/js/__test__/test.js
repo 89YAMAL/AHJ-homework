@@ -1,5 +1,4 @@
-import Game from '../Game';
-
+import Game from '../game';
 
 test('new object class Game', () => {
   const expected = {
@@ -10,7 +9,6 @@ test('new object class Game', () => {
   const result = new Game('goblin.png', 4);
   expect(result).toEqual(expected);
 });
-
 
 test('section in body', () => {
   const game = new Game('goblin.png', 2);
@@ -57,12 +55,3 @@ test('random', () => {
   const result = game.getRandom(max);
   expect(result).toBeLessThan(max);
 });
-
-// test('should insert cell in field', () => {
-//   const game = new Game('goblin.png', 2);
-//   game.createContainer();
-//   game.createField();
-
-//   const result = document.body.querySelector('.field_container');
-//   expect(result).toEqual(expect.anything());
-// });
